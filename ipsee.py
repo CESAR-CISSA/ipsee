@@ -5,8 +5,8 @@
 IPSee - Network package sniffer
 ======================================
 
-Python script to collect MQTT packages
-and return header fields of protocols
+Python script to collect packages and
+return the protocols header fields
 
 ======================================
 """

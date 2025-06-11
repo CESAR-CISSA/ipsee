@@ -1,8 +1,6 @@
 # IPSee - Network package sniffer
 
-IPSee is a python script used to collect TCP/IP packages and return header fields of the protocol.
-
-**Disclamer**: Currently, this script focuses on MQTT packets, but can be extended to any packet transported by TCP/IP.
+IPSee is a python script to collect packages and return the protocols header fields.
 
 # Project structure
 
@@ -12,10 +10,6 @@ camed_ipsee/
 ├── net_helper.py                           # Helper to network interfaces selection
 ├── logs/
 │   └── ipsee.log                           # The IPSee capture log
-├── model/
-│   └── model.pickle                        # The machine learn model pickle file
-├── results/
-│   └── output_cep_analysis.csv             # The CEP analysis output csv file
 ├── requirements.txt                        # Required python libraries
 ├── README.md                               # This file
 ```
