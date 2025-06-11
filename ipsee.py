@@ -18,6 +18,7 @@ from net_helper import NetworkInterfaceManager
 import logging
 import sys
 import io
+import os
 
 
 # Tee class to write to multiple outputs
@@ -88,10 +89,24 @@ def main(log_file, iface, sport, dport):
 
 
 if __name__ == "__main__":
+    log_folder = "logs"
+    log_name = "ipsee.log"
+    log_file = os.path.join(log_folder, log_name)
+
     manager = NetworkInterfaceManager()
     selected_interface = manager.choose_interface_cli()
 
-    log_file = "logs/ipsee.log"
+    if not os.path.exists(log_folder):
+        os.makedirs("logs")
+
+    if not os.path.exists(log_file):
+        try:
+            with open(log_file, 'w') as f:
+                pass
+        except IOError as e:
+            print(f"Error: Can not create log file: '{log_file}': {e}")
+
+    #log_file = "logs/ipsee.log"
     iface = selected_interface
     sport = 1883
     dport = 1883
