@@ -106,7 +106,6 @@ if __name__ == "__main__":
         except IOError as e:
             print(f"Error: Can not create log file: '{log_file}': {e}")
 
-    #log_file = "logs/ipsee.log"
     iface = selected_interface
     sport = 1883
     dport = 1883
