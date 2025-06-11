@@ -3,12 +3,11 @@
 
 """
 IPSee - Network package sniffer
-======================================
+========================================================================
 
-Python script to collect packages and
-return the protocols header fields
+Python script to collect packages and return the protocols header fields
 
-======================================
+========================================================================
 """
 
 
